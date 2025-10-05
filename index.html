@@ -1,22 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Oraculum PRO</title>
-  <meta name="description" content="Intelligence – Energie – Conscience. Technologie locale, intelligente et durable.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>Oraculum PRO — Intelligence, énergie, conscience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Oraculum PRO — Technologie locale, intelligente et durable. Intelligence • Intégrité • Impact." />
+  <meta name="theme-color" content="#0b0c10" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' fill='%230b0c10'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-size='34' font-family='Segoe UI, Roboto, sans-serif' fill='%237de3ff'%3EOP%3C/text%3E%3C/svg%3E" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Oraculum PRO — Intelligence, énergie, conscience" />
+  <meta property="og:description" content="Technologie locale, intelligente et durable. Intelligence • Intégrité • Impact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.oraculumpro.com/" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Oraculum PRO — Intelligence, énergie, conscience" />
+  <meta name="twitter:description" content="Technologie locale, intelligente et durable. Intelligence • Intégrité • Impact." />
   <style>
-    body { background:#0b0c10; color:#f3f3f3; font-family: -apple-system, Segoe UI, Roboto, sans-serif; text-align:center; padding:8vh 2rem; }
-    h1 { font-size:2.6rem; margin:0 0 .5rem; }
-    h2 { font-weight:400; font-size:1.2rem; color:#7de3ff; margin:0 0 2rem; }
-    p { font-size:1.05rem; line-height:1.6; opacity:.95; }
-    .footer{margin-top:3rem; opacity:.7; font-size:.95rem;}
+    :root {
+      --bg: #0b0c10;
+      --fg: #f3f3f3;
+      --accent: #7de3ff;
+      --muted: #c8d0d8;
+      --card: #111317;
+      --ring: rgba(125, 227, 255, .2);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      background: radial-gradient(1200px 800px at 50% -10%, rgba(125, 227, 255, .08), transparent 60%), var(--bg);
+      color: var(--fg);
+      display: grid;
+      place-items: center;
+      padding: 5vh 2rem;
+    }
+    .wrap {
+      width: min(820px, 100%);
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35), 0 0 0 6px var(--ring);
+      border-radius: 18px;
+      padding: clamp(1.6rem, 3vw, 2.4rem);
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      margin: 0 0 .25rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: .2px;
+    }
+    .tag {
+      display: inline-block;
+      margin: .25rem 0 1.25rem;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      background: rgba(125, 227, 255, .12);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: .9rem;
+      border: 1px solid rgba(125, 227, 255, .25);
+    }
+    p.lead {
+      margin: 0 auto 1.2rem;
+      max-width: 56ch;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: clamp(1rem, 1.4vw, 1.125rem);
+    }
+    .slogan {
+      margin: .4rem 0 1.4rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .cta {
+      margin-top: 1.2rem;
+      display: inline-flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      color: var(--fg);
+      padding: .75rem 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); border-color: rgba(125, 227, 255, .5); }
+    .btn.primary {
+      border-color: rgba(125, 227, 255, .6);
+      background: linear-gradient(180deg, rgba(125,227,255,.22), rgba(125,227,255,.06));
+      color: var(--fg);
+    }
+    footer { margin-top: 1.2rem; opacity: .7; font-size: .95rem; }
+    .blink { animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: .85; text-shadow: 0 0 0 rgba(125,227,255,0); }
+      50% { opacity: 1; text-shadow: 0 0 24px rgba(125,227,255,.25); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .blink { animation: none; }
+    }
   </style>
 </head>
 <body>
-  <h1>Oraculum PRO</h1>
-  <h2>Je l ai deja entendu : c est Oraculum PRO !</h2>
-  <p>Technologie locale, intelligente et durable.<br>Intelligence – Integrite – Impact.</p>
-  <p class="footer">© 2025 Oraculum PRO — Marque deposee (INPI n°5186261)</p>
+  <main class="wrap" role="main" aria-label="Oraculum PRO">
+    <div class="tag">Marque déposée • INPI n°5186261</div>
+    <h1>Oraculum PRO</h1>
+    <p class="slogan blink">« Je l’ai déjà entendu : c’est Oraculum PRO ! »</p>
+    <p class="lead">
+      Technologie locale, intelligente et durable.<br />
+      <strong>Intelligence • Intégrité • Impact</strong>.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="https://www.oraculumpro.com" rel="noopener">Visiter le site officiel</a>
+      <a class="btn" href="mailto:contact@oraculumpro.com">Nous contacter</a>
+    </div>
+
+    <footer>
+      © 2025 Oraculum PRO — Tous droits réservés.
+    </footer>
+  </main>
 </body>
 </html>
